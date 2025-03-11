@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="logo">Pixe</div>
+            <div class="user-info" id="userInfo">
+                <button id="loginBtn" class="auth-btn">Iniciar Sesión</button>
+                <button id="registerBtn" class="auth-btn">Registrarse</button>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <div class="canvas-wrapper">
+                <canvas id="mainCanvas"></canvas>
+                <div class="minimap-container">
+                    <canvas id="minimapCanvas"></canvas>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="color-palette" id="colorPalette"></div>
+                <div class="timer-display" id="timer">
+                    <div class="timer-label">Siguiente píxel en:</div>
+                    <div class="timer-countdown">1:00</div>
+                </div>
+                <div class="pixel-history">
+                    <h3>Píxeles Recientes</h3>
+                    <div id="pixelHistory" class="history-list"></div>
+                </div>
+                <div class="coordinates" id="coordinates">X: 0, Y: 0</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="authForms"></div>
+        </div>
+    </div>
+
+    <script src="js/websocket.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
